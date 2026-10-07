@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS // Quantum Ecosystem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Canvas / Parallax Orbs -->
+    <div class="parallax-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <span class="brand-logo">⚡</span>
+            <span class="brand-name">NEXUS</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero" class="nav-link active" data-target="hero">Home</a>
+            <a href="#features" class="nav-link" data-target="features">Ecosystem</a>
+            <a href="#showcase" class="nav-link" data-target="showcase">Quantum</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn btn-outline" id="nav-login-btn">Sign In</button>
+            <button class="btn btn-primary" id="nav-register-btn">Get Started</button>
+        </div>
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Main Views Container -->
+    <main class="main-container">
+
+        <!-- LANDING PAGE VIEW -->
+        <section id="landing-view" class="view active">
+            <!-- Hero Section with Parallax Text -->
+            <section id="hero" class="hero-section">
+                <div class="hero-content" data-speed="0.2">
+                    <div class="badge animate-fade">
+                        <span class="badge-dot"></span> v4.0 Quantum Release Live
+                    </div>
+                    <h1 class="hero-title parallax-text" data-speed="0.05">
+                        Architecting the <span class="gradient-text">Future</span> of Intelligence
+                    </h1>
+                    <p class="hero-subtitle parallax-text" data-speed="0.08">
+                        Experience lightning-fast decentralized infrastructure, immersive neural analytics, and next-gen quantum security built for elite teams.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-glow" id="hero-get-started">
+                            Launch Console <span>→</span>
+                        </button>
+                        <button class="btn btn-glass" id="hero-explore">
+                            Explore Docs
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">99.99%</span>
+                            <span class="stat-label">Uptime SLA</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-num">&lt; 1.2ms</span>
+                            <span class="stat-label">Global Latency</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-num">500k+</span>
+                            <span class="stat-label">Active Nodes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" data-speed="-0.15">
+                    <div class="quantum-card-3d">
+                        <div class="card-glow"></div>
+                        <div class="quantum-core">
+                            <div class="ring ring-1"></div>
+                            <div class="ring ring-2"></div>
+                            <div class="ring ring-3"></div>
+                            <div class="core-dot"></div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-title">Neural Engine Active</div>
+                            <div class="card-sub">Processing 4.2 TB/s</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="features-section">
+                <div class="section-header" data-speed="0.03">
+                    <h2>Engineered for <span class="gradient-text">Scale</span></h2>
+                    <p>Unmatched performance across every dimension of your tech stack.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card glass-panel" data-speed="0.05">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Quantum Encryption</h3>
+                        <p>Post-quantum cryptographic algorithms protecting your mission-critical data against emerging threats.</p>
+                    </div>
+                    <div class="feature-card glass-panel" data-speed="0.08">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Sub-Millisecond Edge</h3>
+                        <p>Over 300 edge locations worldwide ensuring instant response times for users everywhere.</p>
+                    </div>
+                    <div class="feature-card glass-panel" data-speed="0.06">
+                        <div class="feature-icon">🔮</div>
+                        <h3>Autonomous AI Ops</h3>
+                        <p>Self-healing infrastructure powered by advanced neural agents that preempt failures.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- LOGIN VIEW -->
+        <section id="login-view" class="view auth-view">
+            <div class="auth-card glass-panel">
+                <div class="auth-header">
+                    <h2>Welcome Back</h2>
+                    <p>Enter your credentials to access your Nexus console.</p>
+                </div>
+                <form id="login-form" class="auth-form" onsubmit="return false;">
+                    <div class="input-group">
+                        <label for="login-email">Email Address</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">✉️</span>
+                            <input type="email" id="login-email" placeholder="name@company.com" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="login-password" placeholder="••••••••••••" required>
+                        </div>
+                    </div>
+                    <div class="auth-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            Remember this device
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-glow btn-full" id="submit-login">
+                        Sign In to Console
+                    </button>
+                </form>
+                <div class="auth-footer">
+                    Don't have an account? <a href="#" id="switch-to-register">Create account</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- REGISTER VIEW -->
+        <section id="register-view" class="view auth-view">
+            <div class="auth-card glass-panel">
+                <div class="auth-header">
+                    <h2>Create Account</h2>
+                    <p>Get started with your free Nexus developer tier today.</p>
+                </div>
+                <form id="register-form" class="auth-form" onsubmit="return false;">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="reg-firstname">First Name</label>
+                            <input type="text" id="reg-firstname" placeholder="Alex" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="reg-lastname">Last Name</label>
+                            <input type="text" id="reg-lastname" placeholder="Vance" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-email">Work Email</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">✉️</span>
+                            <input type="email" id="reg-email" placeholder="alex@company.com" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-password">Create Password</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="reg-password" placeholder="At least 8 characters" required>
+                        </div>
+                    </div>
+                    <div class="auth-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-glow btn-full" id="submit-register">
+                        Create Free Account
+                    </button>
+                </form>
+                <div class="auth-footer">
+                    Already have an account? <a href="#" id="switch-to-login">Sign in</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+        <span id="toast-icon">✨</span>
+        <span id="toast-msg">Action successful!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
